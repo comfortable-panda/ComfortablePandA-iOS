@@ -54,11 +54,11 @@ struct LoginView: View {
                             
                             if ECS_ID == "apple" && Password == "apple" {
                                 loginRes = LoginStatus(success: true)
-                                Demo.shared.setDemoFlag(demo: true)
+                                Saver.shared.setDemoFlag(demo: true)
                             } else {
                                 SakaiAPI.shared.logout()
                                 loginRes = SakaiAPI.shared.login()
-                                Demo.shared.setDemoFlag(demo: false)
+                                Saver.shared.setDemoFlag(demo: false)
                             }
                             
                             
