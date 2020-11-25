@@ -62,6 +62,7 @@ struct SettingView: View {
                     }
                     
                     Button(action:{
+                        SakaiAPI.shared.logout()
                         let deleteIDResult = deleteKeychain(account: "ECS_ID")
                         let deletePASSResult = deleteKeychain(account: "Password")
                         
