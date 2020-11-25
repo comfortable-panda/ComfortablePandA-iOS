@@ -20,6 +20,9 @@ class Saver {
     @AppStorage("lectureInfo", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
     private var storedLectureInfo: Data = Data()
     
+    @AppStorage("demo", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
+    private var isDemoMode: Data = Data()
+    
     func saveKadaiFetchedTimeToStorage() -> () {
         let currentDate = Date()
         guard let save = try? JSONEncoder().encode(currentDate) else { return }
@@ -52,6 +55,12 @@ class Saver {
         
         self.storedKadaiList = save
         print("saved kadaiList")
+    }
+    
+    func setDemoFlag(demo: Bool) -> () {
+        guard let save = try? JSONEncoder().encode(demo) else { return }
+        self.isDemoMode = save
+        print("saved demo mode settings")
     }
 }
 

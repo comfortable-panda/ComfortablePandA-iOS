@@ -46,11 +46,14 @@ struct MainView: View {
                     Button(action: {
                         self.isLoading = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            let res = SakaiAPI.shared.fetchAssignmentsFromPandA()
-                            if res.success {
+//                            let res: KadaiFetchStatus
+                            
+                            let demoMode:Bool = Loader.shared.loadDemoFlag()
+                            
+                            if demoMode {
+                                let res = Demo.shared.loadDemoKadaiList()
                                 self.isLoadingMsg = "課題リスト作成中..."
-                                kadaiList = createKadaiList(rawKadaiList: res.rawKadaiList!, count: 999)
-                                Saver.shared.mergeAndSaveKadaiListToStorage(newKadaiList: kadaiList)
+                                Saver.shared.saveKadaiListToStorage(kadaiList: res)
                                 Saver.shared.saveKadaiFetchedTimeToStorage()
                                 kadaiList = createKadaiList(_kadaiList: Loader.shared.loadKadaiListFromStorage2(), count: 999)
                                 
@@ -59,10 +62,27 @@ struct MainView: View {
                                 currentDate = Date()
                                 WidgetCenter.shared.reloadAllTimelines()
                                 UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
-                            }else{
-                                errorAlert = true
-                                errorAlertMsg = res.errorMsg
+                            } else {
+                                let res = SakaiAPI.shared.fetchAssignmentsFromPandA()
+                                if res.success {
+                                    self.isLoadingMsg = "課題リスト作成中..."
+                                    kadaiList = createKadaiList(rawKadaiList: res.rawKadaiList!, count: 999)
+                                    Saver.shared.mergeAndSaveKadaiListToStorage(newKadaiList: kadaiList)
+                                    Saver.shared.saveKadaiFetchedTimeToStorage()
+                                    kadaiList = createKadaiList(_kadaiList: Loader.shared.loadKadaiListFromStorage2(), count: 999)
+                                    
+                                    
+                                    kadaiFetchedTime = Loader.shared.loadKadaiFetchedTimeFromStorage()
+                                    currentDate = Date()
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                    UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
+                                }else{
+                                    errorAlert = true
+                                    errorAlertMsg = res.errorMsg
+                                }
                             }
+                            
+                            
                             self.isLoading = false
                         }
                     }) {

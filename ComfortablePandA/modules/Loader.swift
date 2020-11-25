@@ -21,6 +21,9 @@ class Loader {
     @AppStorage("lectureInfo", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
     private var storedLectureInfo: Data = Data()
     
+    @AppStorage("demo", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
+    private var isDemoMode: Data = Data()
+    
     func loadKadaiFetchedTimeFromStorage() -> String {
         var loadKadaiFetchedTime: Date
         guard let load = try? JSONDecoder().decode(Date.self, from: storedKadaiFetchedTime) else {
@@ -64,6 +67,15 @@ class Loader {
         }
         loadKadaiList = load
         return loadKadaiList
+    }
+    
+    func loadDemoFlag() -> Bool {
+        var demoMode: Bool
+        guard let load = try? JSONDecoder().decode(Bool.self, from: isDemoMode) else {
+            return false
+        }
+        demoMode = load
+        return demoMode
     }
 }
 
