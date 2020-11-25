@@ -55,6 +55,8 @@
 		9792404A25272228008F5F98 /* ComfortablePandAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792404925272228008F5F98 /* ComfortablePandAUITests.swift */; };
 		9792405B2527229C008F5F98 /* Kadai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792405A2527229C008F5F98 /* Kadai.swift */; };
 		97924060252724D9008F5F98 /* KadaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792405F252724D8008F5F98 /* KadaiView.swift */; };
+		97CEB1BE256E1BDE0029D2B6 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CEB1BD256E1BDE0029D2B6 /* Demo.swift */; };
+		97CEB1BF256E1BDE0029D2B6 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CEB1BD256E1BDE0029D2B6 /* Demo.swift */; };
 		97D3B363254D448200D64ABF /* Deleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3B362254D448200D64ABF /* Deleter.swift */; };
 		97D3B364254D448200D64ABF /* Deleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3B362254D448200D64ABF /* Deleter.swift */; };
 		97F92F7E2528621E007CC58C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771AFB625285D9700D02198 /* Colors.swift */; };
@@ -148,6 +150,7 @@
 		9792404B25272228008F5F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9792405A2527229C008F5F98 /* Kadai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kadai.swift; sourceTree = "<group>"; };
 		9792405F252724D8008F5F98 /* KadaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadaiView.swift; sourceTree = "<group>"; };
+		97CEB1BD256E1BDE0029D2B6 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		97D3B362254D448200D64ABF /* Deleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deleter.swift; sourceTree = "<group>"; };
 		97F92F8325289635007CC58C /* DueDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDates.swift; sourceTree = "<group>"; };
 		97F92F8E2528E569007CC58C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -247,6 +250,7 @@
 				9747DAAC254188C100911430 /* Status.swift */,
 				9747DAEC2544294900911430 /* Creator.swift */,
 				97D3B362254D448200D64ABF /* Deleter.swift */,
+				97CEB1BD256E1BDE0029D2B6 /* Demo.swift */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -519,6 +523,7 @@
 				978A107E25272A92002C6C19 /* Kadai.swift in Sources */,
 				974CA6B425407652007BA50F /* KadaiView.swift in Sources */,
 				978A1071252729F4002C6C19 /* miniPandA.intentdefinition in Sources */,
+				97CEB1BF256E1BDE0029D2B6 /* Demo.swift in Sources */,
 				9747DAA725416FD400911430 /* ErrorMsg.swift in Sources */,
 				97F92F942528E613007CC58C /* Loader.swift in Sources */,
 				97D3B364254D448200D64ABF /* Deleter.swift in Sources */,
@@ -548,6 +553,7 @@
 				9771AFA7252744FB00D02198 /* WidgetHeaderView.swift in Sources */,
 				974CA6A6254075EA007BA50F /* Lecture.swift in Sources */,
 				974CA684253F3F1D007BA50F /* Background.swift in Sources */,
+				97CEB1BE256E1BDE0029D2B6 /* Demo.swift in Sources */,
 				9792402F25272222008F5F98 /* ContentView.swift in Sources */,
 				974CA5EC253AA1A2007BA50F /* MainTabView.swift in Sources */,
 				9771AFB725285D9700D02198 /* Colors.swift in Sources */,
