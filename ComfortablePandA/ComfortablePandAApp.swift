@@ -9,6 +9,7 @@ import SwiftUI
 import BackgroundTasks
 import Firebase
 import FirebaseMessaging
+import WidgetKit
 
 
 @main
@@ -126,7 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
        Messaging.messaging().appDidReceiveMessage(userInfo)
       // Print message ID.
       if let messageID = userInfo[gcmMessageIDKey] {
-        print("Message ID: \(messageID)")
+        print("Message ID1: \(messageID)")
       }
 
       // Print full message.
@@ -142,8 +143,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
        Messaging.messaging().appDidReceiveMessage(userInfo)
       // Print message ID.
       if let messageID = userInfo[gcmMessageIDKey] {
-        print("Message ID: \(messageID)")
+        print("Message ID2: \(messageID)")
       }
+        if let value = userInfo["perform-fetch"] as? String {
+            if value=="1" {
+                let res = SakaiAPI.shared.fetchAssignmentsFromPandA()
+                if res.success {
+//                    self.isLoadingMsg = "課題リスト作成中..."
+                    let kadaiList = createKadaiList(rawKadaiList: res.rawKadaiList!, count: 999)
+                    Saver.shared.mergeAndSaveKadaiListToStorage(newKadaiList: kadaiList)
+                    Saver.shared.saveKadaiFetchedTimeToStorage()
+//                    kadaiList = createKadaiList(_kadaiList: Loader.shared.loadKadaiListFromStorage2(), count: 999)
+                    
+                    
+//                    kadaiFetchedTime = Loader.shared.loadKadaiFetchedTimeFromStorage()
+//                    currentDate = Date()
+                    WidgetCenter.shared.reloadAllTimelines()
+                    UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
+                }else{
+                    print("fetch error")
+                }
+                print("fetched")
+            } else {
+                print("not fetched")
+            }
+        }
 
       // Print full message.
       print(userInfo)
