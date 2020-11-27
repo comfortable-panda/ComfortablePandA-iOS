@@ -9,6 +9,7 @@ import SwiftUI
 import BackgroundTasks
 import Firebase
 import FirebaseMessaging
+import Firestore
 import WidgetKit
 
 
@@ -80,7 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
         
-        
+//        Firestore の初期化
+        let db = Firestore.firestore()
 //        Firebase Push Notifiactionの設定
         FirebaseApp.configure()
         // [START set_messaging_delegate]
@@ -149,15 +151,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if value=="1" {
                 let res = SakaiAPI.shared.fetchAssignmentsFromPandA()
                 if res.success {
-//                    self.isLoadingMsg = "課題リスト作成中..."
                     let kadaiList = createKadaiList(rawKadaiList: res.rawKadaiList!, count: 999)
                     Saver.shared.mergeAndSaveKadaiListToStorage(newKadaiList: kadaiList)
                     Saver.shared.saveKadaiFetchedTimeToStorage()
-//                    kadaiList = createKadaiList(_kadaiList: Loader.shared.loadKadaiListFromStorage2(), count: 999)
-                    
-                    
-//                    kadaiFetchedTime = Loader.shared.loadKadaiFetchedTimeFromStorage()
-//                    currentDate = Date()
                     WidgetCenter.shared.reloadAllTimelines()
                     UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
                 }else{
