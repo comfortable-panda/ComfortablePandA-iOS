@@ -37,19 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.das08.ComfortablePandA.fetch", using: nil) { task in
-        ////            e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.das08.ComfortablePandA.fetch"]
-        //            BGTask.shared.handleAppRefresh(task: task as! BGAppRefreshTask)
-        //        }
-        
         AppEventHandler.shared.startObserving()
-        
-        
         
         UIApplication.shared.applicationIconBadgeNumber = badgeCount
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
-        
         
 //        Firebase Push Notifiactionの設定
         FirebaseApp.configure()
@@ -58,9 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             options: authOptions,
             completionHandler: {_, _ in })
         
-        
         application.registerForRemoteNotifications()
-        
         UNUserNotificationCenter.current().requestAuthorization(
             options: [.alert,.sound])
         {
