@@ -7,6 +7,9 @@
 
 import SwiftUI
 import BackgroundTasks
+import Firebase
+import FirebaseMessaging
+import UserNotifications
 
 @main
 struct ComfortablePandAApp: App {
@@ -22,30 +25,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     @AppStorage("badgeCount", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
     private var badgeCount: Int = 0
     
+    var notificationGranted = true
+    
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
         willPresent notification: UNNotification,
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions)
-        -> Void) {
+            -> Void) {
         completionHandler([[.banner, .list, .sound]])
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.das08.ComfortablePandA.fetch", using: nil) { task in
-////            e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.das08.ComfortablePandA.fetch"]
-//            BGTask.shared.handleAppRefresh(task: task as! BGAppRefreshTask)
-//        }
+        //        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.das08.ComfortablePandA.fetch", using: nil) { task in
+        ////            e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"com.das08.ComfortablePandA.fetch"]
+        //            BGTask.shared.handleAppRefresh(task: task as! BGAppRefreshTask)
+        //        }
         
         AppEventHandler.shared.startObserving()
+        
         
         
         UIApplication.shared.applicationIconBadgeNumber = badgeCount
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
-
+        
+        
+//        Firebase Push Notifiactionの設定
+        FirebaseApp.configure()
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+        
+        
+        application.registerForRemoteNotifications()
+        
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert,.sound])
+        {
+            (granted, error) in
+            self.notificationGranted = granted
+            if let error = error {
+                print("granted, but Error in notification permission:\(error.localizedDescription)")
+            }}
+        
         return true
     }
+    
 }
 
 class PrintOperation: Operation {
