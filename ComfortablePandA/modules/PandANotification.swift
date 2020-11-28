@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 import UserNotifications
 
-struct Notification {
+struct PandANotification {
     var id: String
     var title: String
     var body: String
 }
 
 class LocalNotificationManager {
-    var notifications = [Notification]()
+    var notifications = [PandANotification]()
     
     func requestPermission() -> Void {
         UNUserNotificationCenter
@@ -29,7 +29,7 @@ class LocalNotificationManager {
     }
     
     func addNotification(title: String, body: String) -> Void {
-        notifications.append(Notification(id: UUID().uuidString, title: title, body: body))
+        notifications.append(PandANotification(id: UUID().uuidString, title: title, body: body))
     }
     
     func scheduleNotifications() -> Void {
