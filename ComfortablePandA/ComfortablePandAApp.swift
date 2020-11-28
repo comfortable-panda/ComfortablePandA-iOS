@@ -130,6 +130,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       // Print full message.
       print(userInfo)
     }
+    
+    var backgroundTaskID: UIBackgroundTaskIdentifier = .invalid
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -144,20 +146,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       }
         if let value = userInfo["perform-fetch"] as? String {
             if value=="1" {
-                let res = SakaiAPI.shared.fetchAssignmentsFromPandA()
-                if res.success {
-                    let kadaiList = createKadaiList(rawKadaiList: res.rawKadaiList!, count: 999)
-                    Saver.shared.mergeAndSaveKadaiListToStorage(newKadaiList: kadaiList)
-                    Saver.shared.saveKadaiFetchedTimeToStorage()
-                    WidgetCenter.shared.reloadAllTimelines()
-                    UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
-                }else{
-                    print("fetch error")
-                }
-                print("fetched")
+                // Perform the task on a background queue.
+                   DispatchQueue.global().async {
+                      // Request the task assertion and save the ID.
+                      self.backgroundTaskID = UIApplication.shared.beginBackgroundTask (withName: "Perform Long Task") {
+                         // End the task if time expires.
+                        UIApplication.shared.endBackgroundTask(self.backgroundTaskID)
+                        self.backgroundTaskID = UIBackgroundTaskIdentifier.invalid
+                      }
+                             
+                      // Run task synchronously.
+                    let res = SakaiAPI.shared.fetchAssignmentsFromPandA()
+                    if res.success {
+                        let kadaiList = createKadaiList(rawKadaiList: res.rawKadaiList!, count: 999)
+                        Saver.shared.mergeAndSaveKadaiListToStorage(newKadaiList: kadaiList)
+                        Saver.shared.saveKadaiFetchedTimeToStorage()
+                        WidgetCenter.shared.reloadAllTimelines()
+                        
+                    }else{
+                        print("fetch error")
+                    }
+                    print("fetched")
+                             
+                      // End the task assertion.
+                    UIApplication.shared.endBackgroundTask(self.backgroundTaskID)
+                    self.backgroundTaskID = UIBackgroundTaskIdentifier.invalid
+                   }
+                
             } else {
                 print("not fetched")
             }
+            UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
         }
 
       // Print full message.
@@ -219,6 +238,7 @@ class AppEventHandler: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(self.didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.willTerminate), name: UIApplication.willTerminateNotification, object: nil)
+        
     }
     
     @objc func didFinishLaunch() {
