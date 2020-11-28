@@ -5,10 +5,12 @@
 //  Created by das08 on 2020/11/27.
 //
 
-import Firestore
+import Firebase
+
 
 class FireStore {
-    let db = FireStore.firestore()
+    static let shared = FireStore()
+    let db = Firestore.firestore()
     
     func read(colName: String, fieldName: String, UUID: String) -> Bool {
         var res = false

@@ -9,7 +9,6 @@ import SwiftUI
 import BackgroundTasks
 import Firebase
 import FirebaseMessaging
-import Firestore
 import WidgetKit
 
 
@@ -181,6 +180,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // the FCM registration token.
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
       print("APNs token retrieved: \(deviceToken)")
+        let uuid = UIDevice.current.identifierForVendor!.uuidString
+        print("uuid: \(uuid)")
+        FireStore.shared.insert(colName: "tokens", UUID: uuid, token: "\(deviceToken)")
 
       // With swizzling disabled you must set the APNs token here.
        Messaging.messaging().apnsToken = deviceToken
