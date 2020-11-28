@@ -5,10 +5,14 @@
 //  Created by das08 on 2020/11/27.
 //
 
+import FirebaseFirestore
 import Firebase
 
 
+
+
 class FireStore {
+    
     static let shared = FireStore()
     let db = Firestore.firestore()
     

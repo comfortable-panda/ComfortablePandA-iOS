@@ -8,6 +8,7 @@
 import SwiftUI
 import BackgroundTasks
 import Firebase
+import FirebaseFirestore
 import FirebaseMessaging
 import WidgetKit
 
@@ -80,10 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
         
+        FirebaseApp.configure()
 //        Firestore の初期化
         let db = Firestore.firestore()
 //        Firebase Push Notifiactionの設定
-        FirebaseApp.configure()
+        
         // [START set_messaging_delegate]
            Messaging.messaging().delegate = self
            // [END set_messaging_delegate]
@@ -112,6 +114,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
       print("Firebase registration token: \(String(describing: fcmToken))")
+        let uuid = UIDevice.current.identifierForVendor!.uuidString
+        print("uuid: \(uuid)")
+        FireStore.shared.insert(colName: "tokens", UUID: uuid, token: fcmToken!)
 
       let dataDict:[String: String] = ["token": fcmToken ?? ""]
       NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
@@ -180,9 +185,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // the FCM registration token.
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
       print("APNs token retrieved: \(deviceToken)")
-        let uuid = UIDevice.current.identifierForVendor!.uuidString
-        print("uuid: \(uuid)")
-        FireStore.shared.insert(colName: "tokens", UUID: uuid, token: "\(deviceToken)")
+        
 
       // With swizzling disabled you must set the APNs token here.
        Messaging.messaging().apnsToken = deviceToken
