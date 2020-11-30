@@ -131,6 +131,7 @@ struct MainView: View {
                         
                         kadaiFetchedTime = Loader.shared.loadKadaiFetchedTimeFromStorage()
                         currentDate = Date()
+                        WidgetCenter.shared.reloadAllTimelines()
                         UIApplication.shared.applicationIconBadgeNumber = BadgeCount.shared.badgeCount
                     }
                 }
