@@ -61,7 +61,7 @@ struct SettingView: View {
                         }
                     }
                     
-                    Toggle(isOn: CPSetting.shared.$showDoneAssignments){
+                    Toggle(isOn: CPSetting.shared.$autoUpdate){
                         Text("1時間ごとに自動更新")
                     }.onTapGesture {
                         let uuid = UIDevice.current.identifierForVendor!.uuidString
