@@ -12,4 +12,7 @@ class CPSetting {
     
     @AppStorage("showDoneAssignments", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
     var showDoneAssignments: Bool = true
+    
+    @AppStorage("autoUpdate", store: UserDefaults(suiteName: "group.com.das08.ComfortablePandA"))
+    var autoUpdate: Bool = true
 }

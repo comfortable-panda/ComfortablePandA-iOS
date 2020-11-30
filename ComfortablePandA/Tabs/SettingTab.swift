@@ -61,6 +61,17 @@ struct SettingView: View {
                         }
                     }
                     
+                    Toggle(isOn: CPSetting.shared.$showDoneAssignments){
+                        Text("1時間ごとに自動更新")
+                    }.onTapGesture {
+                        let uuid = UIDevice.current.identifierForVendor!.uuidString
+                        if CPSetting.shared.autoUpdate {
+                            FireStore.shared.insert(colName: "tokens", UUID: uuid, update: "Yes")
+                        }else{
+                            FireStore.shared.insert(colName: "tokens", UUID: uuid, update: "None")
+                        }
+                    }
+                    
                     Button(action:{
                         SakaiAPI.shared.logout()
                         let deleteIDResult = deleteKeychain(account: "ECS_ID")
