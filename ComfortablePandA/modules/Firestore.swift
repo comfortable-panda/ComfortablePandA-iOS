@@ -34,4 +34,10 @@ class FireStore {
             [ "FCMToken": token ],
         merge: true)
     }
+    
+    func insert(colName: String, UUID: String, update: String) -> () {
+        db.collection(colName).document(UUID).setData(
+            [ "notify": update ],
+        merge: true)
+    }
 }
