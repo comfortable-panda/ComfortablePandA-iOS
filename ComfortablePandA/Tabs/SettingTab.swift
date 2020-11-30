@@ -62,13 +62,13 @@ struct SettingView: View {
                     }
                     
                     Toggle(isOn: CPSetting.shared.$autoUpdate){
-                        Text("1時間ごとに自動更新")
+                        Text("1時間ごとに自動更新(8時-19時)")
                     }.onTapGesture {
                         let uuid = UIDevice.current.identifierForVendor!.uuidString
                         if CPSetting.shared.autoUpdate {
-                            FireStore.shared.insert(colName: "tokens", UUID: uuid, update: "Yes")
-                        }else{
                             FireStore.shared.insert(colName: "tokens", UUID: uuid, update: "None")
+                        }else{
+                            FireStore.shared.insert(colName: "tokens", UUID: uuid, update: "Yes")
                         }
                     }
                     
