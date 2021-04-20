@@ -34,7 +34,7 @@ struct MainView: View {
         }else{
             VStack{
                 Text("取得日時: \(kadaiFetchedTime)")
-                Text("更新日時: \(dispDate(date: currentDate))")
+                Text("リスト更新日時: \(dispDate(date: currentDate))")
                     .onReceive(timer){ _ in
                         kadaiList = createKadaiList(_kadaiList: Loader.shared.loadKadaiListFromStorage2(), count: 999)
                         kadaiFetchedTime = Loader.shared.loadKadaiFetchedTimeFromStorage()

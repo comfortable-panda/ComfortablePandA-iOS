@@ -210,7 +210,7 @@ final class SakaiAPI {
         }
         var lectureEntry: [LectureInfo]?
         
-        let urlString = "https://panda.ecs.kyoto-u.ac.jp/direct/site.json"
+        let urlString = "https://panda.ecs.kyoto-u.ac.jp/direct/site.json?_limit=20"
         let url = URL(string: urlString)!
         let request = URLRequest(url: url, timeoutInterval: 10)
 

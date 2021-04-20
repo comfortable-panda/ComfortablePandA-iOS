@@ -21,11 +21,16 @@ struct AssignmentEntry: Codable, Identifiable {
     let id: String
     let title: String
     let dueTime: AssignmentEntryDueTime
+    let openTime: AssignmentEntryOpenTime
     let instructions: String
 }
 
 struct AssignmentEntryDueTime: Codable {
-    let time: Int
+    let epochSecond: Int
+}
+
+struct AssignmentEntryOpenTime: Codable {
+    let epochSecond: Int
 }
 
 struct LectureCollection: Codable {

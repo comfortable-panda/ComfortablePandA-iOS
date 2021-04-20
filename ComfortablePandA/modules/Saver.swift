@@ -33,6 +33,7 @@ class Saver {
     func saveLectureInfoToStorage(lectureInfoList: [LectureInfo]) -> () {
         guard let save = try? JSONEncoder().encode(lectureInfoList) else { return }
         self.storedLectureInfo = save
+        print(lectureInfoList)
         print("saved lecID")
     }
     

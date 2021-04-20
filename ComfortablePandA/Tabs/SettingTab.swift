@@ -102,7 +102,7 @@ struct SettingView: View {
                     ) {
                         HStack{
                             Image(systemName: "arrow.clockwise.icloud")
-                            Text("講義名情報を再取得する")
+                            Text("「不明」講義名を再取得する")
                                 .alert(isPresented: $showingAlert) {
                                     Alert(title: Text(alertInfo))
                                 }
@@ -113,7 +113,6 @@ struct SettingView: View {
                 Section(header: Text("デバッグ")) {
                     Button(action:{
                         setNotification(title: "📗新規課題", body: "2020/10/15 11:00 テスト配信\n課題１")
-                        setNotification(title: "⏰提出1日前", body: "2020/10/10 12:00 テスト配信\n課題１")
                     }
                     ) {
                         Text("通知テスト（5秒後）")

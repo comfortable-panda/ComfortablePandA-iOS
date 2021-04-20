@@ -15,11 +15,12 @@ func createKadaiList(rawKadaiList: [AssignmentEntry], count: Int) -> [Kadai] {
         let id = rawEntry.id
         let lectureName = findLectureName(lectureInfoList: lectureInfoList!, lecID:                                             rawEntry.context)
         let assignmentInfo = rawEntry.title
-        let dueDate = Date(timeIntervalSince1970: TimeInterval(rawEntry.dueTime.time / 1000))
+        let dueDate = Date(timeIntervalSince1970: TimeInterval(rawEntry.dueTime.epochSecond))
+        let openDate = Date(timeIntervalSince1970: TimeInterval(rawEntry.openTime.epochSecond))
         let description = rawEntry.instructions.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         let isFinished = false
         
-        if (dueDate >= Date()){
+        if (dueDate >= Date() && openDate < Date()){
             kadaiList.append(
                 Kadai(id: id, lectureName: lectureName, assignmentInfo: assignmentInfo, dueDate: dueDate, description: description ,isFinished: isFinished)
             )

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08AAAF4720712625AB6F0E45 /* Pods_ComfortablePandATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D44160B89A369602A18F93 /* Pods_ComfortablePandATests.framework */; };
-		2CC5881F9F424949305920EE /* Pods_ComfortablePandA_ComfortablePandAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A78C6222CA9FDA54909895B /* Pods_ComfortablePandA_ComfortablePandAUITests.framework */; };
-		72667521271933B27CDFD10B /* Pods_miniPandAExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B555AE14C7FD7E688853A /* Pods_miniPandAExtension.framework */; };
+		21F60BBBB8979841C51D7AA4 /* Pods_ComfortablePandATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E468C3035066184E20797F90 /* Pods_ComfortablePandATests.framework */; };
+		6650231F37869535157AD323 /* Pods_ComfortablePandA_ComfortablePandAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54154764D1670F2E1850FAFC /* Pods_ComfortablePandA_ComfortablePandAUITests.framework */; };
+		9453EABCDC3F467D3C6280A0 /* Pods_miniPandAExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37EC0494E8A9ABFF6A5A4D9 /* Pods_miniPandAExtension.framework */; };
 		9747DAA225416F2800911430 /* ErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747DAA125416F2800911430 /* ErrorMsg.swift */; };
 		9747DAA725416FD400911430 /* ErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747DAA125416F2800911430 /* ErrorMsg.swift */; };
 		9747DAAD254188C100911430 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747DAAC254188C100911430 /* Status.swift */; };
@@ -35,6 +35,7 @@
 		974CA6B925407665007BA50F /* WidgetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771AFA6252744FB00D02198 /* WidgetHeaderView.swift */; };
 		974CA6BF25407695007BA50F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974CA6BE25407695007BA50F /* Setting.swift */; };
 		974CA6C4254076BC007BA50F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974CA6BE25407695007BA50F /* Setting.swift */; };
+		975D5E06E531B61DBBE85C3A /* Pods_ComfortablePandA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E5CF8EA5E3DAF8B7F27A01 /* Pods_ComfortablePandA.framework */; };
 		9771AFA7252744FB00D02198 /* WidgetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771AFA6252744FB00D02198 /* WidgetHeaderView.swift */; };
 		9771AFB1252745A800D02198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9792403025272228008F5F98 /* Assets.xcassets */; };
 		9771AFB725285D9700D02198 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771AFB625285D9700D02198 /* Colors.swift */; };
@@ -74,7 +75,6 @@
 		97F92F9F2529DBAC007CC58C /* SakaiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F92F992529DB2A007CC58C /* SakaiAPI.swift */; };
 		97F92FBC252C6C24007CC58C /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F92FBB252C6C23007CC58C /* Saver.swift */; };
 		97F92FBD252C6C24007CC58C /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F92FBB252C6C23007CC58C /* Saver.swift */; };
-		CB37D5ECBADC8E615E9A899D /* Pods_ComfortablePandA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0543A9C2298847D6C3C369A /* Pods_ComfortablePandA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,11 +116,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A78C6222CA9FDA54909895B /* Pods_ComfortablePandA_ComfortablePandAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComfortablePandA_ComfortablePandAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		251C5476324F143B84B0C086 /* Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig"; sourceTree = "<group>"; };
-		377BDAF354734F958B861150 /* Pods-miniPandAExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniPandAExtension.release.xcconfig"; path = "Target Support Files/Pods-miniPandAExtension/Pods-miniPandAExtension.release.xcconfig"; sourceTree = "<group>"; };
-		45D44160B89A369602A18F93 /* Pods_ComfortablePandATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComfortablePandATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69BD4D1177D4B6FBDB74BC98 /* Pods-miniPandAExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniPandAExtension.debug.xcconfig"; path = "Target Support Files/Pods-miniPandAExtension/Pods-miniPandAExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		2730D77A53DFADFA25A1F5AC /* Pods-ComfortablePandATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandATests.debug.xcconfig"; path = "Target Support Files/Pods-ComfortablePandATests/Pods-ComfortablePandATests.debug.xcconfig"; sourceTree = "<group>"; };
+		33E5CF8EA5E3DAF8B7F27A01 /* Pods_ComfortablePandA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComfortablePandA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4064A108C27F3F62BF9C9296 /* Pods-ComfortablePandA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA.release.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA/Pods-ComfortablePandA.release.xcconfig"; sourceTree = "<group>"; };
+		54154764D1670F2E1850FAFC /* Pods_ComfortablePandA_ComfortablePandAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComfortablePandA_ComfortablePandAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		906E222290F0714A5FE54CC3 /* Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9747DAA125416F2800911430 /* ErrorMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMsg.swift; sourceTree = "<group>"; };
 		9747DAAC254188C100911430 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		9747DAE125428CC000911430 /* Sakai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sakai.swift; sourceTree = "<group>"; };
@@ -170,13 +170,13 @@
 		97F92F8E2528E569007CC58C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		97F92F992529DB2A007CC58C /* SakaiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakaiAPI.swift; sourceTree = "<group>"; };
 		97F92FBB252C6C23007CC58C /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
-		A6F5AEC4CE8958901504A18C /* Pods-ComfortablePandATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandATests.debug.xcconfig"; path = "Target Support Files/Pods-ComfortablePandATests/Pods-ComfortablePandATests.debug.xcconfig"; sourceTree = "<group>"; };
-		C79DD1933855DD2A2779E6D8 /* Pods-ComfortablePandA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA.release.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA/Pods-ComfortablePandA.release.xcconfig"; sourceTree = "<group>"; };
-		C92CD5BC644665F7C4715EFF /* Pods-ComfortablePandATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandATests.release.xcconfig"; path = "Target Support Files/Pods-ComfortablePandATests/Pods-ComfortablePandATests.release.xcconfig"; sourceTree = "<group>"; };
-		DF73B8A25022D425C91C74AE /* Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC8B555AE14C7FD7E688853A /* Pods_miniPandAExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miniPandAExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0543A9C2298847D6C3C369A /* Pods_ComfortablePandA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComfortablePandA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9325A99B2E3714E793ED02D /* Pods-ComfortablePandA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA.debug.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA/Pods-ComfortablePandA.debug.xcconfig"; sourceTree = "<group>"; };
+		9E2F9D22D187D62FBFE4AA0D /* Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CEC48B8AFEBAD69B411419B0 /* Pods-miniPandAExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniPandAExtension.release.xcconfig"; path = "Target Support Files/Pods-miniPandAExtension/Pods-miniPandAExtension.release.xcconfig"; sourceTree = "<group>"; };
+		E468C3035066184E20797F90 /* Pods_ComfortablePandATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComfortablePandATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4AA9B8136F82197C7BBACDD /* Pods-ComfortablePandA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandA.debug.xcconfig"; path = "Target Support Files/Pods-ComfortablePandA/Pods-ComfortablePandA.debug.xcconfig"; sourceTree = "<group>"; };
+		E76A3552762A0D60914CB2A4 /* Pods-miniPandAExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniPandAExtension.debug.xcconfig"; path = "Target Support Files/Pods-miniPandAExtension/Pods-miniPandAExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		F37EC0494E8A9ABFF6A5A4D9 /* Pods_miniPandAExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miniPandAExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5109A38989A73FCC732311B /* Pods-ComfortablePandATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComfortablePandATests.release.xcconfig"; path = "Target Support Files/Pods-ComfortablePandATests/Pods-ComfortablePandATests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +186,7 @@
 			files = (
 				978A1069252729EF002C6C19 /* SwiftUI.framework in Frameworks */,
 				978A1067252729EF002C6C19 /* WidgetKit.framework in Frameworks */,
-				72667521271933B27CDFD10B /* Pods_miniPandAExtension.framework in Frameworks */,
+				9453EABCDC3F467D3C6280A0 /* Pods_miniPandAExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +196,7 @@
 			files = (
 				9747DB032544320500911430 /* PartialSheet in Frameworks */,
 				974CA637253B0F47007BA50F /* SwiftUIRefresh in Frameworks */,
-				CB37D5ECBADC8E615E9A899D /* Pods_ComfortablePandA.framework in Frameworks */,
+				975D5E06E531B61DBBE85C3A /* Pods_ComfortablePandA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08AAAF4720712625AB6F0E45 /* Pods_ComfortablePandATests.framework in Frameworks */,
+				21F60BBBB8979841C51D7AA4 /* Pods_ComfortablePandATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CC5881F9F424949305920EE /* Pods_ComfortablePandA_ComfortablePandAUITests.framework in Frameworks */,
+				6650231F37869535157AD323 /* Pods_ComfortablePandA_ComfortablePandAUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,14 +222,14 @@
 		68D3629205B609F19BEB4467 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9325A99B2E3714E793ED02D /* Pods-ComfortablePandA.debug.xcconfig */,
-				C79DD1933855DD2A2779E6D8 /* Pods-ComfortablePandA.release.xcconfig */,
-				DF73B8A25022D425C91C74AE /* Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig */,
-				251C5476324F143B84B0C086 /* Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig */,
-				A6F5AEC4CE8958901504A18C /* Pods-ComfortablePandATests.debug.xcconfig */,
-				C92CD5BC644665F7C4715EFF /* Pods-ComfortablePandATests.release.xcconfig */,
-				69BD4D1177D4B6FBDB74BC98 /* Pods-miniPandAExtension.debug.xcconfig */,
-				377BDAF354734F958B861150 /* Pods-miniPandAExtension.release.xcconfig */,
+				E4AA9B8136F82197C7BBACDD /* Pods-ComfortablePandA.debug.xcconfig */,
+				4064A108C27F3F62BF9C9296 /* Pods-ComfortablePandA.release.xcconfig */,
+				906E222290F0714A5FE54CC3 /* Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig */,
+				9E2F9D22D187D62FBFE4AA0D /* Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig */,
+				2730D77A53DFADFA25A1F5AC /* Pods-ComfortablePandATests.debug.xcconfig */,
+				F5109A38989A73FCC732311B /* Pods-ComfortablePandATests.release.xcconfig */,
+				E76A3552762A0D60914CB2A4 /* Pods-miniPandAExtension.debug.xcconfig */,
+				CEC48B8AFEBAD69B411419B0 /* Pods-miniPandAExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -294,10 +294,10 @@
 			children = (
 				978A1066252729EF002C6C19 /* WidgetKit.framework */,
 				978A1068252729EF002C6C19 /* SwiftUI.framework */,
-				F0543A9C2298847D6C3C369A /* Pods_ComfortablePandA.framework */,
-				0A78C6222CA9FDA54909895B /* Pods_ComfortablePandA_ComfortablePandAUITests.framework */,
-				45D44160B89A369602A18F93 /* Pods_ComfortablePandATests.framework */,
-				EC8B555AE14C7FD7E688853A /* Pods_miniPandAExtension.framework */,
+				33E5CF8EA5E3DAF8B7F27A01 /* Pods_ComfortablePandA.framework */,
+				54154764D1670F2E1850FAFC /* Pods_ComfortablePandA_ComfortablePandAUITests.framework */,
+				E468C3035066184E20797F90 /* Pods_ComfortablePandATests.framework */,
+				F37EC0494E8A9ABFF6A5A4D9 /* Pods_miniPandAExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978A1076252729F4002C6C19 /* Build configuration list for PBXNativeTarget "miniPandAExtension" */;
 			buildPhases = (
-				B21CBD2185D0BD8945797DAC /* [CP] Check Pods Manifest.lock */,
+				94C7CDD22D698B982CF775CA /* [CP] Check Pods Manifest.lock */,
 				978A1060252729EF002C6C19 /* Sources */,
 				978A1061252729EF002C6C19 /* Frameworks */,
 				978A1062252729EF002C6C19 /* Resources */,
@@ -407,12 +407,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9792404E25272228008F5F98 /* Build configuration list for PBXNativeTarget "ComfortablePandA" */;
 			buildPhases = (
-				EC24B8D51A7382873F147C1C /* [CP] Check Pods Manifest.lock */,
+				CE1C119C6B52FB630B1090BA /* [CP] Check Pods Manifest.lock */,
 				9792402525272222008F5F98 /* Sources */,
 				9792402625272222008F5F98 /* Frameworks */,
 				9792402725272222008F5F98 /* Resources */,
 				978A1079252729F4002C6C19 /* Embed App Extensions */,
-				6D5E7EF5DED51018785EA767 /* [CP] Embed Pods Frameworks */,
+				38925DD84749212DCDD98CE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,7 +432,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9792405125272228008F5F98 /* Build configuration list for PBXNativeTarget "ComfortablePandATests" */;
 			buildPhases = (
-				A7B6C05EA603C3C1180099C7 /* [CP] Check Pods Manifest.lock */,
+				F34BDC535DF8A7D91AB9E915 /* [CP] Check Pods Manifest.lock */,
 				9792403625272228008F5F98 /* Sources */,
 				9792403725272228008F5F98 /* Frameworks */,
 				9792403825272228008F5F98 /* Resources */,
@@ -451,11 +451,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9792405425272228008F5F98 /* Build configuration list for PBXNativeTarget "ComfortablePandAUITests" */;
 			buildPhases = (
-				F86B52B5A830CC6B64EC6A12 /* [CP] Check Pods Manifest.lock */,
+				827819E786C2FA17B0E9E0BF /* [CP] Check Pods Manifest.lock */,
 				9792404125272228008F5F98 /* Sources */,
 				9792404225272228008F5F98 /* Frameworks */,
 				9792404325272228008F5F98 /* Resources */,
-				BE8A7BC38BD57856B9CA3836 /* [CP] Embed Pods Frameworks */,
+				42A8BEBFB1FAA58F7D449ACB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -555,7 +555,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6D5E7EF5DED51018785EA767 /* [CP] Embed Pods Frameworks */ = {
+		38925DD84749212DCDD98CE2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -572,7 +572,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA/Pods-ComfortablePandA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7B6C05EA603C3C1180099C7 /* [CP] Check Pods Manifest.lock */ = {
+		42A8BEBFB1FAA58F7D449ACB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827819E786C2FA17B0E9E0BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -587,14 +604,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ComfortablePandATests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ComfortablePandA-ComfortablePandAUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B21CBD2185D0BD8945797DAC /* [CP] Check Pods Manifest.lock */ = {
+		94C7CDD22D698B982CF775CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -616,24 +633,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE8A7BC38BD57856B9CA3836 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ComfortablePandA-ComfortablePandAUITests/Pods-ComfortablePandA-ComfortablePandAUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC24B8D51A7382873F147C1C /* [CP] Check Pods Manifest.lock */ = {
+		CE1C119C6B52FB630B1090BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -655,7 +655,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F86B52B5A830CC6B64EC6A12 /* [CP] Check Pods Manifest.lock */ = {
+		F34BDC535DF8A7D91AB9E915 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -670,7 +670,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ComfortablePandA-ComfortablePandAUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ComfortablePandATests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -784,14 +784,14 @@
 /* Begin XCBuildConfiguration section */
 		978A1077252729F4002C6C19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69BD4D1177D4B6FBDB74BC98 /* Pods-miniPandAExtension.debug.xcconfig */;
+			baseConfigurationReference = E76A3552762A0D60914CB2A4 /* Pods-miniPandAExtension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = miniPandAExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = V6B4TS7288;
 				INFOPLIST_FILE = miniPandA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -799,7 +799,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.das08.ComfortablePandA.miniPandA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -810,14 +810,14 @@
 		};
 		978A1078252729F4002C6C19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 377BDAF354734F958B861150 /* Pods-miniPandAExtension.release.xcconfig */;
+			baseConfigurationReference = CEC48B8AFEBAD69B411419B0 /* Pods-miniPandAExtension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = miniPandAExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = V6B4TS7288;
 				INFOPLIST_FILE = miniPandA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -825,7 +825,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.das08.ComfortablePandA.miniPandA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -952,14 +952,14 @@
 		};
 		9792404F25272228008F5F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9325A99B2E3714E793ED02D /* Pods-ComfortablePandA.debug.xcconfig */;
+			baseConfigurationReference = E4AA9B8136F82197C7BBACDD /* Pods-ComfortablePandA.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ComfortablePandA/ComfortablePandA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"ComfortablePandA/Preview Content\"";
 				DEVELOPMENT_TEAM = V6B4TS7288;
 				ENABLE_PREVIEWS = YES;
@@ -969,7 +969,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.das08.ComfortablePandA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -979,14 +979,14 @@
 		};
 		9792405025272228008F5F98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C79DD1933855DD2A2779E6D8 /* Pods-ComfortablePandA.release.xcconfig */;
+			baseConfigurationReference = 4064A108C27F3F62BF9C9296 /* Pods-ComfortablePandA.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ComfortablePandA/ComfortablePandA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"ComfortablePandA/Preview Content\"";
 				DEVELOPMENT_TEAM = V6B4TS7288;
 				ENABLE_PREVIEWS = YES;
@@ -996,7 +996,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.das08.ComfortablePandA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1006,7 +1006,7 @@
 		};
 		9792405225272228008F5F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6F5AEC4CE8958901504A18C /* Pods-ComfortablePandATests.debug.xcconfig */;
+			baseConfigurationReference = 2730D77A53DFADFA25A1F5AC /* Pods-ComfortablePandATests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1029,7 +1029,7 @@
 		};
 		9792405325272228008F5F98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C92CD5BC644665F7C4715EFF /* Pods-ComfortablePandATests.release.xcconfig */;
+			baseConfigurationReference = F5109A38989A73FCC732311B /* Pods-ComfortablePandATests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1052,7 +1052,7 @@
 		};
 		9792405525272228008F5F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF73B8A25022D425C91C74AE /* Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig */;
+			baseConfigurationReference = 906E222290F0714A5FE54CC3 /* Pods-ComfortablePandA-ComfortablePandAUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1073,7 +1073,7 @@
 		};
 		9792405625272228008F5F98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 251C5476324F143B84B0C086 /* Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig */;
+			baseConfigurationReference = 9E2F9D22D187D62FBFE4AA0D /* Pods-ComfortablePandA-ComfortablePandAUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

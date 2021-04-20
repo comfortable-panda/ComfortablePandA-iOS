@@ -100,5 +100,7 @@ struct miniPandAWidget: Widget {
                 .background(mpColor.background)
         }
         .supportedFamilies([.systemLarge])
+        .configurationDisplayName("miniPandA")
+        .description("取得した課題一覧をウィジェットで簡単に確認できます")
     }
 }
