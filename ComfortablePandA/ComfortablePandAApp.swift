@@ -108,6 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let uuid = UIDevice.current.identifierForVendor!.uuidString
         print("uuid: \(uuid)")
         FireStore.shared.insert(colName: "tokens", UUID: uuid, token: fcmToken!)
+        FireStore.shared.insert(colName: "tokens", UUID: uuid, update: "Yes")
 
       let dataDict:[String: String] = ["token": fcmToken ?? ""]
       NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)

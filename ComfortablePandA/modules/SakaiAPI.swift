@@ -257,7 +257,11 @@ final class SakaiAPI {
 
 func findLectureName(lectureInfoList: [LectureInfo], lecID: String) -> String {
     let index = lectureInfoList.firstIndex { $0.id == lecID }
-    if index != nil { return lectureInfoList[index!].title.components(separatedBy: "]")[safe: 1]! }
+    if index != nil {
+        let lectureName = lectureInfoList[index!].title.components(separatedBy: "]")[safe: 1]!
+        if lectureName != "不明"{ return lectureName }
+        else {return lectureInfoList[index!].title}
+    }
     else{ return "不明" }
 }
 
